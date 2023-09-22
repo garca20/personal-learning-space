@@ -1,0 +1,37 @@
+body {
+    margin: 0%;
+}
+
+header {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(48, 30, 206);
+    padding: 15px 0px 0px 0px;
+    text-align: center;
+    color: white;
+    position: sticky;
+}
+
+nav {
+    width: 100%;
+    height: 40px;
+    background-color: #fcd333;
+}
+
+#container {
+    /* I still need to figure out how to display them properly */
+    background-color: #f5257f44;
+}
+
+section {
+    width: 70%;
+    height: 30px;
+    background-color: #e32678;
+}
+
+aside {
+    /* I still need to figure out how to use you aswell */
+    width: 30%;
+    height: 90px;
+    background-color: #eb7031;
+}
