@@ -1,32 +1,53 @@
-body {
-    margin: 0%;
+* {
+    margin: 0;
 }
 
 header {
     width: 100%;
-    height: 40px;
-    background-color: rgb(48, 30, 206);
-    padding: 15px 0px 0px 0px;
-    text-align: center;
-    color: white;
-    position: sticky;
+    height: 60px;
+    background-color: rgba(255, 0, 0, 0.9);
 }
 
 nav {
-    width: 100%;
-    height: 40px;
-    background-color: #fcd333;
+    padding: 20px;
 }
 
-#container {
-    /* I still need to figure out how to display them properly */
-    background-color: #f5257f44;
+nav > ul {
+    list-style: none;
+    /* Todos los elementos de manera flexible, al lado del otro*/
+    display: flex;
+    justify-content: space-around;
+}
+
+nav > ul > li > a {
+    width: 100%;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #fcd333;
+    border: 1px black solid;
+    border-radius: 40px;
 }
 
 section {
-    width: 70%;
-    height: 30px;
+    width: 90%;
+    height: 60px;
+    padding: 10px;
+    border: 1px black solid;
     background-color: #e32678;
+    margin-top: 10px;
+}
+
+main {
+    width: 70%;
+    height: 380px;
+    background-color: blue;
+    padding: 10px;
+}
+
+.container {
+    width: 100%;
+    background-color: rgb(32, 243, 24);
+    height: 400px;
 }
 
 aside {
@@ -34,4 +55,10 @@ aside {
     width: 30%;
     height: 90px;
     background-color: #eb7031;
+}
+
+footer {
+    width: 100%;
+    height: 40px;
+    background-color: blueviolet;
 }
