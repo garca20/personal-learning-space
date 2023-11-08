@@ -1,0 +1,27 @@
+:root {
+    --bg_color_unfocused: rgb(200, 200, 200);
+    --bg_color_onfocus: rgb(150, 150, 150);
+    --box_width: 300px;
+    --box_height: 300px;
+}
+
+#mouseEvent {
+    background-color: var(--bg_color_unfocused);
+    height: var(--box_height);
+    width: var(--box_width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#explosion {
+    background-image: url(https://www.angrybirds.com/wp-content/uploads/2022/05/ABCOM_202203_350x350_CharacterDimensio_Blues_Classic.png);
+    background-color: azure;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: var(--box_width);
+    height: var(--box_height);
+    cursor: pointer;
+}

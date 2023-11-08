@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Main Page</title>
+    <title>Probando JS</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style_index_new.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="">Botón 1</a></li>
-                <li><a href="">Botón 2</a></li>
-                <li><a href="">Botón 3</a></li>
-                <li><a href="">Botón 4</a></li>
-                <li><a href="">Botón 5</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <main>
-            <section>Sections 1</section>
-            <section>Sections 2</section>
-            <section>Sections 3</section>
-            <section>Sections 4</section>
-        </main>
-        <aside>
-            Aside
-        </aside>
-    </div>
-    <footer>
-        Footer
-    </footer>
+    
+    <main>
+        <section>
+            1. Sección de mouse
+            <div id="mouseEvent" onmouseover="changeBgColorOnClick()" onmouseout="resetBgColor()">
+                Hola, pon el mouse aqui.
+            </div>
+        </section>
+        <section>
+            2. Explosión 
+            <div id="explosion" onclick="soundAndBg('explosion')" onmouseout="adjustImage('explosion', '300px', '300px', 'url(https://www.angrybirds.com/wp-content/uploads/2022/05/ABCOM_202203_350x350_CharacterDimensio_Blues_Classic.png)')">
+
+            </div>
+        </section>
+        <section>
+            3. User input - toDo
+        </section>
+        <section>
+            4.
+        </section>
+        <section>
+            5.
+        </section>
+    </main>
+
+
+
+
+
+    <script src="js/js_index_og.js"></script>
 </body>
 </html>
