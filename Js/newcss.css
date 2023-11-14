@@ -1,0 +1,10 @@
+#red_box_with_answer {
+    
+}
+
+
+#red_box_with_answer>#inside_box {
+    color: #fff;
+    background-color: #9b1661;
+
+}

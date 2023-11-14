@@ -18,8 +18,8 @@ const valTwo        = document.querySelector("#input_valTwo")
 const btn_calculate = document.querySelector("#btn_calculate");
 
 btn_calculate.addEventListener("mouseover", event_name => {
-    let name = valOne.value + " " + valTwo.value;
-    name = name.toUpperCase();
+    let name = (parseInt(valOne.value) + parseInt(valTwo.value));
+    // name = name.toUpperCase();
     alert(name);
 });
 

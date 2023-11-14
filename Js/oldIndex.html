@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            background-color: rgb(164, 230, 230);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body onload="load_page()">
+    
+    <button onclick="load_page()">Cargar Página</button>
+    
+    <div id="box" onmouseover="entry()" onmouseout="exit()">
+    </div>
+
+    <br>
+
+    <input type="text" id="input_valOne" placeholder="Ingrese un dato">
+    <input type="text" id="input_valTwo" placeholder="Ingrese un dato">
+
+    <button id="btn_calculate">CALCULAR</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="javas.js"></script>
+
+</body>
+</html>

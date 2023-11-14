@@ -3,33 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba</title>
     <style>
-        #box {
-            width: 200px;
-            height: 200px;
-            border: 2px solid #000;
-            background-color: rgb(199, 253, 253);
-            border-radius: 20px;
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+        button {
+            border-radius: 10%;
         }
     </style>
+    <title>Probando</title>
 </head>
-<body onload="load_page()">
+<body onload="afterLoad()">
     
-    <button onclick="load_page()">Cargar Página</button>
+    <form id="formNumbers">
+
+        <p>Bienvenido, ingrese dos números a sumar:</p>
+
+        <br>
+
+        <label for="numero1">1.</label>
+        <input type="text" id="numero1" autocomplete="off" placeholder="Ingrese el primer número" onblur="hola()">
+
+        <br> <br>
+
+        <label for="numero2">2.</label>
+        <input type="text" id="numero2" autocomplete="off" placeholder="Ingrese el segundo número">
+
+        <br><br>
+
+        <button id="calcular">Calcular</button>
+
+        <p id="answer">A</p>
+
+        <div id="red_box_with_answer">
+            
+        </div>
+
+
+    </form>
     
-    <div id="box" onmouseover="entry()" onmouseout="exit()">
-    </div>
 
-    <br>
 
-    <input type="text" id="input_valOne" placeholder="Ingrese un dato">
-    <input type="text" id="input_valTwo" placeholder="Ingrese un dato">
-
-    <button id="btn_calculate">CALCULAR</button>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="javas.js"></script>
-
+    <script src="js_new_index.js"></script>
 </body>
 </html>
