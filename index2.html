@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            display: inline-block;
+            background-color: #ececec;
+        }
+        li {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            margin: 100px;
+            background-color: #FFF;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body onload="saludar()">
+    <ul>
+        <li>
+            <a href="">
+                <img src="" alt=""> <br>
+            </a>
+
+            <label for="numeroA">Primer numero:</label>
+            <input id="numeroA" type="text" placeholder="Ingrese un numero." onblur="validateNumber(numeroA, 0)">
+
+            <div id="warning_text_1"></div> <br>
+
+            <label for="numeroB">Segundo numero:</label>
+            <input id="numeroB" type="text" placeholder="Ingrese un numero." onblur="validateNumber(numeroB, 1)">
+
+            <div id="warning_text_2"></div>
+
+            <div id="printNumbers"></div>
+        </li>
+        <li>
+            <a href="">
+                <img src="" alt=""> <br> Hola
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="	https://planedatabase.com/images/season_two/group_one/tomato.png" alt="" onmouseover="printALot()"> <br> Aqui
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="" alt=""> <br> Hola
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="" alt=""> <br> Hola
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="" alt=""> <br> Hola
+            </a>
+        </li>
+    </ul>
+
+    <script>
+
+        let numeroA = document.getElementById("numeroA")
+        let numeroB = document.getElementById("numeroB")
+
+        function saludar() {
+            console.log("Hola");
+            numeroA.focus();
+            numeroB.disabled = true;            
+        }
+
+        function validateNumber(a, b) {
+
+            const listWarning = ["warning_text_1", "warning_text_2"];
+            const warning = listWarning[b];
+
+            notANumber = isNaN(a.value) || a.value.length == 0;
+
+            if (notANumber) {
+                document.getElementById(warning).innerText="Not a number";
+                document.getElementById(warning).style.color = "red";
+                numeroB.disabled = notANumber;
+            }
+            else {
+                document.getElementById(warning).innerText="Validated";                
+                document.getElementById(warning).style.color = "green";
+                numeroB.disabled = notANumber;
+            }
+
+        }
+
+        function printALot() {
+            for (let i = parseInt(numeroA.value);  i<parseInt(numeroB.value); i=i+2) {
+                document.getElementById("printNumbers").innerText += " "+i;
+            }
+        }
+
+    </script>
+</body>
+</html>
