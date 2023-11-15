@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <label for="contra">Password:</label>
+    <input type="text" autocomplete="off" placeholder="Ingrese su contraseña" id="contra">
+    <br>
+
+    <label for="emai">Email:</label>
+    <input type="email" autocomplete="off" placeholder="Ingrese su email" id="emai">
+    <br>
+
+    <button id="reset">Reset</button>
+    <button id="send">Send</button>
+
+    <br><br><br><br>
+
+    <button onclick="changeBg()">Hola</button>
+    Hola mi color va a cambiar
+    <a href="">Hola</a>
+
+    <script>
+
+        const botonSend = document.getElementById("send")
+        let contra    = document.getElementById("contra").value;
+        let emai      = document.getElementById("emai").value;
+        let passList = ["12345678", "abcde"];
+        let emailList = ["afg@gmail.com", "afg2@gmail.com"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let i = 0;
+        let i2 = 1;
+        function changeBg() {
+            const colorList = ["#585858", "#AAA"];
+            document.body.style.backgroundColor = colorList[i];
+            document.body.style.color = colorList[i2];
+            i++;
+            i2++;
+            if (i2>1) {
+                i2=0;
+            }
+            if (i>1) {
+                i = 0;
+            }
+        }
+    </script>
+</body>
+</html>

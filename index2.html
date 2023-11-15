@@ -34,12 +34,12 @@
             </a>
 
             <label for="numeroA">Primer numero:</label>
-            <input id="numeroA" type="text" placeholder="Ingrese un numero." onblur="validateNumber(numeroA, 0)">
+            <input id="numeroA" type="text" autocomplete="off" placeholder="Ingrese un numero." onblur="validateNumber(numeroA, 0)">
 
             <div id="warning_text_1"></div> <br>
 
             <label for="numeroB">Segundo numero:</label>
-            <input id="numeroB" type="text" placeholder="Ingrese un numero." onblur="validateNumber(numeroB, 1)">
+            <input id="numeroB" type="text" autocomplete="off" disabled="true" placeholder="Ingrese un numero." onblur="validateNumber(numeroB, 1)">
 
             <div id="warning_text_2"></div>
 
@@ -47,12 +47,18 @@
         </li>
         <li>
             <a href="">
-                <img src="" alt=""> <br> Hola
+                <img src="" alt=""> <br>
             </a>
+
+            <label for="nombre1"></label>Ingresa tu nombre:
+            <input type="text" id="nombre1" autocomplete="off" placeholder="Ingrese su nombre." onmousedown="isName()">
+
+            <div id="print_name"></div>
         </li>
         <li>
+            <p onclick="printALot()">click aqui</p>
             <a href="">
-                <img src="" alt="" onmouseover="printALot()"> <br> Aqui
+                <img src="" alt="" > <br> Aqui
             </a>
         </li>
         <li>
@@ -71,11 +77,29 @@
             </a>
         </li>
     </ul>
-
+    
     <script>
 
-        let numeroA = document.getElementById("numeroA")
-        let numeroB = document.getElementById("numeroB")
+        let numeroA    = document.getElementById("numeroA")
+        let numeroB    = document.getElementById("numeroB")
+        let nombre1    = document.getElementById("nombre1")
+        let print_name = document.getElementById("print_name")
+
+        function isName() {
+            const nombre = nombre1.value
+            if (isNaN(nombre)) {
+                for(let index=0; index<nombre.length; index++) {
+                    if (nombre.charAt(index)==" "){                        
+                    }
+                    else {
+                        print_name.innerText += "\n" + nombre.charAt(index);
+                    }
+                }
+            }
+            else {
+                alert("No")
+            }
+        }
 
         function saludar() {
             console.log("Hola");
@@ -93,19 +117,19 @@
             if (notANumber) {
                 document.getElementById(warning).innerText="Not a number";
                 document.getElementById(warning).style.color = "red";
-                numeroB.disabled = notANumber;
             }
             else {
                 document.getElementById(warning).innerText="Validated";                
                 document.getElementById(warning).style.color = "green";
+                numeroA.disabled = "true";
                 numeroB.disabled = notANumber;
             }
 
         }
 
         function printALot() {
-            for (let i = parseInt(numeroA.value);  i<parseInt(numeroB.value); i=i+2) {
-                document.getElementById("printNumbers").innerText += " "+i;
+            for (let i = parseInt(numeroA.value);  i<=parseInt(numeroB.value); i=i+2) {
+                document.getElementById("printNumbers").innerText += "\n"+i;
             }
         }
 
